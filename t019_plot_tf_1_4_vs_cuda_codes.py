@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar 20 08:32:40 2020
+
+@author: vedenev
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+batch_size_all_tf_1_4 = np.load('batch_size_all_tf_1_4__2020_03_20.npy')
+times_tf_1_4 = np.load('times_tf_1_4__2020_03_20.npy')
+
+cuda_codes_times = np.asarray([[512,  0.00136102],
+[1024,  0.00126280],
+[2048,  0.00064478],
+[3072,  0.00047949]])
+
+
+
+
+plt.semilogy(batch_size_all_tf_1_4, times_tf_1_4, 'k.-', label='tf 1.4')
+plt.semilogy([1], [0.00104740], 'gx', label='cuda code optimized batch_size=1')
+plt.semilogy(cuda_codes_times[:, 0], cuda_codes_times[:, 1], 'r.-', label='cuda codes')
+plt.xlabel('batch size')
+plt.ylabel('mean time per sample, sec')
+plt.legend()

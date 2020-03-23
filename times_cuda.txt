@@ -1,0 +1,30 @@
+all weights constants except W3_conv            2020_02_13__2_stable_maximal_constnats.cu           0.00127470 sec/sample
+1st and 2nd layers have constant weights            2020_02_13__1_stable_constant_weights_1st_and_2nd_layers.cu         0.00118140 sec/sample
+no constant memory            2020_02_13__3_stable_no_constant_weights.cu         0.00120700 sec/sample
+1st and 2nd with constants all with shared memeory with repeated mutiply            2020_02_18__05_stable_shared_memory_all_layers.cu           0.00105580 sec/sample
+1st and 2nd with constants all with shared memeory no repeated mutiply            2020_02_20__08_stable_no_repeated_multiply_memory_all_layers.cu            0.00104740  sec/sample
+1st and 2nd with constants all with shared memeory no repeated mutiply input from CPU           2020_02_27__09_stable_no_repeated_multiply_memory_all_layers_input_from_cpu.cu          0.00112120 sec/sample
+batched all net in one kernel, batch size = 512            2020_03_20__10_batched_all_net_in one_kernel.cu            0.00136102 sec/sample
+batched all net in one kernel, batch size = 1024            2020_03_20__10_batched_all_net_in one_kernel.cu            0.00126280 sec/sample
+batched all net in one kernel, batch size = 2048            2020_03_20__10_batched_all_net_in one_kernel.cu            0.00064478 sec/sample
+batched all net in one kernel, batch size = 3072            2020_03_20__10_batched_all_net_in one_kernel.cu            0.00047949 sec/sample
+1024            0.00126335
+
+To measure time properly: clear solution, mesure time at second run
+
+2020_02_13__3_stable_no_constant_weights.cu time variation:
+0.00122400
+0.00124010
+0.00123770
+
+2020_02_20__08_stable_no_repeated_multiply_memory_all_layers.cu repeats at 202_02_07:
+0.00111240
+0.00110550
+0.00108880
+0.00108900
+
+2020_03_20
+512  0.00136102
+1024  0.00126280
+2048  0.00064478
+3072  0.00047949
