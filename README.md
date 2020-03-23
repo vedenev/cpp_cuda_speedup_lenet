@@ -6,6 +6,7 @@ Tensorflow 1.4 vs CUDA on GPU GTX760:
 Tensorflow 1.4 vs Tensorflow 1.15 on GPU Tesla K80:
 ![tf 1.4 vs tf 1.5](/times_semilogy_tf_1_4_vs_tf_1_15_k80__2020_03_23.png)  
 Final conclusion: for this codes CUDA code is faster then Tensorflow 1.4 if batch size is 1, but for bigger but batch size tensorflow is faster.  
+cuda files, see ready_cu_files:  
 | description | .cu file |  speed, sec/sample |
 |---|---|---|  
 |all weights constants except W3_conv|2020_02_13__2_stable_maximal_constnats.cu|0.00127470|
