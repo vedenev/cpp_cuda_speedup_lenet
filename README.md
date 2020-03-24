@@ -21,13 +21,14 @@ batched, all net in one kernel, batch size = 1024|2020_03_20__10_batched_all_net
 batched, all net in one kernel, batch size = 2048|2020_03_20__10_batched_all_net_in one_kernel.cu|0.00064478
 batched, all net in one kernel, batch size = 3072|2020_03_20__10_batched_all_net_in one_kernel.cu|0.00047949
 
-I used Microsoft Visual Studio 2019, free comunity edition and example vectorAdd (see vectorAdd subfolder) from Nvidia CUDA samples. So to use it copy one of this cu-files to the project directory and rename it to vectorAdd.cu. Also in code specify path to weigths_1d folder. See ```char* weights_dir =  ...``` in the code. How to run the sample:  
+I used Microsoft Visual Studio 2019, free community edition and example vectorAdd (see vectorAdd subfolder) from Nvidia CUDA samples. So to use it copy one of this cu-files to the project directory and rename it to vectorAdd.cu. Also in code specify path to weigths_1d folder. See ```char* weights_dir =  ...``` in the code. How to run the sample:  
 1) copy all  
 from C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\extras\visual_studio_integration\MSBuildExtensions  
 to C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\BuildCustomizations  
 https://devtalk.nvidia.com/default/topic/933708/cuda-setup-and-installation/compiling-and-setting-up-cuda-libraries-on-windows-10/post/5274566/#5274566  
 2) Open 2015 project without conversion  
 3) in properties in configuration in general change target platform version version from 10 to 8  
+
 LeNet architecture used:  
 ```
 architecture:            c 3 x 3            p 2 x 2           c 5 x 5         p 3 x 3         c 3 x 3          c 1 x 1
