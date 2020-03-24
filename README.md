@@ -37,6 +37,7 @@ n multiplies  :          97344                                 518400           
 dimentions:      784                   10816           2704               1296              144                256            10
 ```
 There is no pading here (no zero inputs somewhere in the middle of the net). Last 2 layers are actually fully connected. They are emulated with convolutional layers for easy convert to CUDA codes.  
+Accuracy on validation dataset is 0.9928.  
 First I trainied the net in Tensorflow 1.4 in python. Then convert dataset and weights in to binary format to be able to load them in C++ code, see weigths_1d folder.  
 Python codes:  
 | .py file | description |
