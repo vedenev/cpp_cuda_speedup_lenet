@@ -19,7 +19,8 @@ no constant memory|2020_02_13__3_stable_no_constant_weights.cu|0.00120700
 batched, all net in one kernel, batch size = 512|2020_03_20__10_batched_all_net_in one_kernel.cu|0.00136102
 batched, all net in one kernel, batch size = 1024|2020_03_20__10_batched_all_net_in one_kernel.cu|0.00126280
 batched, all net in one kernel, batch size = 2048|2020_03_20__10_batched_all_net_in one_kernel.cu|0.00064478
-batched, all net in one kernel, batch size = 3072|2020_03_20__10_batched_all_net_in one_kernel.cu|0.00047949  
+batched, all net in one kernel, batch size = 3072|2020_03_20__10_batched_all_net_in one_kernel.cu|0.00047949
+---|---|--- 
 I used Microsoft Visual Studio 2019, free comunity edition and example vectorAdd (see vectorAdd subfolder) from Nvidia CUDA samples. So to use it copy one of this cu-files to the project directory and rename it to vectorAdd.cu. Also in code specify path to weigths_1d folder. See ```char* weights_dir =  ...``` in the code. How to run the sample:  
 1) copy all  
 from C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\extras\visual_studio_integration\MSBuildExtensions  
